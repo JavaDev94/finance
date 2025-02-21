@@ -1,0 +1,21 @@
+# base-ddl.yml
+databaseChangeLog:
+  - changeSet:
+      id: 000-create-user-table
+      author: i.karimov
+      changes:
+        - sqlFile:
+            path: classpath:db.changelog/sql/ddl/000-create-user-table.sql
+            splitStatements: true
+            stripComments: true
+            endDelimiter: GO
+
+  - changeSet:
+      id: 001-create-transaction-table
+      author: i.karimov
+      changes:
+        - sqlFile:
+            path: classpath:db.changelog/sql/ddl/001-create-transaction-table.sql
+            splitStatements: true
+            stripComments: true
+            endDelimiter: GO
